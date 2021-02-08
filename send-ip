@@ -4,7 +4,7 @@ TEMP_FILE=temp_file
 IP_FILE=$1
 
 ip addr | grep -o "inet 172..*" | cut -f 2 -d ' ' | cut -f 1 -d / > "$TEMP_FILE"
-scp -i ~/.ssh/Home-2019-10-27 "$TEMP_FILE" pi2:/home/pi/Git/hyperv-stuff/"$IP_FILE"
+scp -i ~/.ssh/Home-2019-10-27 "$TEMP_FILE" pi2:/home/pi/Git/hyperv-stuff/ip-files/"$IP_FILE"
 rm "$TEMP_FILE"
 
 echo "Sent "$IP_FILE" to raspberry pi"

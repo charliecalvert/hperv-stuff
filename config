@@ -27,3 +27,9 @@ Host mint
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host us01
+	HostName 23.12.12.16
+	Port 22
+	User charlie
+	IdentityFile ~/.ssh/Home-2019-10-27
