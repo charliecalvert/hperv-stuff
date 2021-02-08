@@ -1,0 +1,133 @@
+Host github.com
+	HostName github.com
+	Port 22
+	user git
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host bitbucket.com
+	HostName bitbucket.com
+	Port 22
+	user git
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host pi1
+	HostName 192.168.86.40
+	Port 22
+	User pi
+	IdentityFile ~/.ssh/Home-2019-10-27
+	
+Host pi2
+	HostName 192.168.86.37
+	Port 22
+	User pi
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host esig
+	HostName eastsideintergroup.com
+	Port 22
+	User eastsil4
+	IdentityFile ~/.ssh/esig-key
+
+Host aws
+	HostName 52.35.150.195
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/ElfWest.pem
+
+Host aws-elf
+	HostName 54.187.96.85
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/LightsailDefaultKey-us-west-2.pem
+	
+# Educate
+Host ec2-ed
+	HostName 3.230.241.32
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/ec2-isit320-2019.pem
+
+# My Standard Account
+Host ec2-elf
+	HostName 44.242.18.170
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/ElfWest.pem
+
+# Ubuntu Server Empty
+Host ec2-bcc
+	HostName 192.168.86.53
+	Port 22
+	User bcuser
+	IdentityFile ~/.ssh/elfkey
+
+Host hoa
+	HostName 34.218.246.255
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/ElfWest.pem
+
+Host mroom
+	HostName rohan-gate
+	Port 22
+	User charlie
+
+Host bcuser
+	HostName 192.168.86.52
+	Port 22
+	User bcuser
+	
+Host php
+	HostName 192.168.2.31
+	Port 22
+	User charlie
+
+Host elfpath
+	HostName 192.168.2.13
+	Port 22
+	User charlie
+
+Host forestpath
+	HostName 192.168.86.48
+	Port 22
+	User charlie
+	IdentityFile ~/.ssh/Home-2016-03
+
+Host elflocal
+	HostName 192.168.86.112
+	Port 22
+	User charlie
+	IdentityFile ~/.ssh/Home-2016-03
+
+Host elf-181005
+	HostName 192.168.86.117
+	user bcuser
+	IdentityFile ~/.ssh/Home-2016-03
+
+Host elf-docker
+	HostName 192.168.86.117
+	user bcuser
+	IdentityFile ~/.ssh/Home-2016-03
+
+Host elf-dock
+	HostName 192.168.86.25
+	user bcuser
+	IdentityFile ~/.ssh/Home-2016-03
+
+Host win-pristine
+	HostName 192.168.86.29
+	user bcuser
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host laptop-pristine
+	HostName 192.168.86.35
+	user bcuser
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host vpl2019
+	HostName 192.168.86.34
+	user bcuser
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host * 
+	IdentitiesOnly=yes

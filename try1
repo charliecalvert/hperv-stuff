@@ -1,0 +1,3 @@
+#! /bin/bash
+
+perl -p0e 's/Host bitbucket.com\n\tHostName .*\n/`cat bar`/e' config
