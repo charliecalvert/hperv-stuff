@@ -12,7 +12,7 @@ fs.readFile(args[0], 'utf8', function (err,data) {
     
     //newIP = "Host bitbucket.com\n\tHostName " + data;
     newIP = `Host ${args[1]}.com\n\tHostName ${data}`;
-    console.log('asdf', newIP);
+    console.log('NewIP:', newIP);
 }); 
 
 fs.readFile('config', 'utf8', function (err,data) {
@@ -20,7 +20,7 @@ fs.readFile('config', 'utf8', function (err,data) {
     return console.log(err);
   }
 
-  var go = new RegExp(`Host ${args[1]}.com\n\tHostName .*\n`, 'm')
+  var go = new RegExp(`Host ${args[1]}\n\tHostName .*\n`, 'm')
   var result = data.replace(go, newIP );
   console.log(result);
 
