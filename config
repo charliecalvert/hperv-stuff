@@ -23,19 +23,19 @@ Host pi2
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host mint
-	HostName 1.1.1.10
+	HostName 1.10.10.10
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us01
-	HostName 2.2.2.20
+	HostName 20.20.20.20
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us02
-	HostName 3.3.3.30
+	HostName 3.3.30.30
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
