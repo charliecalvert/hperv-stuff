@@ -4,11 +4,29 @@
 var { modifyConfig } = require('./try');
 var fs = require('fs');
 var files = fs.readdirSync('ip-files/');
+const CONFIG_NAME = 'config';
 
 console.log(files);
 
-for (const file of files) {
-    if (file != "README.md") {
-        modifyConfig([`ip-files/${file}`, file]);
+fs.readFile(CONFIG_NAME, 'utf8', function (err, configData) {
+    if (err) {
+      return console.log(err);
     }
-}
+
+    /* for (const file of files) {
+        if (file != "README.md") {
+            configData = modifyConfig([`ip-files/${file}`, file, configData ]);
+            console.log('RESLT', configData);
+        }
+    } */
+
+    const file = 'us01';
+    configData = modifyConfig([`ip-files/${file}`, file, configData ]);
+
+    console.log(configData);
+    
+    /* fs.writeFile(CONFIG_NAME, configData, 'utf8', function (err) {
+       if (err) return console.log(err);
+    }); */
+  });
+

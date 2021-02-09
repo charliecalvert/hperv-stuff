@@ -1,15 +1,14 @@
+
+// fileToRead, sectionToChange, configFile
 function modifyConfig(args) {
   
-  //import defaultExport, * as fs from 'fs';
-  var fs = require('fs')
-  //import { readFile } from 'fs';
-
-  //var args = process.argv.slice(2);
-  console.log("args:", args);
+  var fs = require('fs');
 
   var newIP = "";
-
-  fs.readFile(args[0], 'utf8', function (err, data) {
+  var data = fs.readFileSync(args[0], 'utf8');
+  newIP = `Host ${args[1]}\n\tHostName ${data}`;
+  console.log('NewIP:', newIP);
+  /* fs.readFile(args[0], 'utf8', function (err, data) {
     if (err) {
       console.log(`Could not read ${args[0]}`);
       return console.log(err);
@@ -17,22 +16,18 @@ function modifyConfig(args) {
 
     //newIP = "Host bitbucket.com\n\tHostName " + data;
     newIP = `Host ${args[1]}\n\tHostName ${data}`;
-    //console.log('NewIP:', newIP);
-  });
+    console.log('NewIP:', newIP);
+  }); */
 
-  fs.readFile('config', 'utf8', function (err, data) {
-    if (err) {
-      return console.log(err);
-    }
+  var regExp = `Host ${args[1]}\n\tHostName .*\n`;
+  console.log('REGEXP_STR', regExp)
+  var go = new RegExp(regExp, 'm');
 
-    var go = new RegExp(`Host ${args[1]}\n\tHostName .*\n`, 'm')
-    var result = data.replace(go, newIP);
-    //console.log(result);
 
-    fs.writeFile(someFile, result, 'utf8', function (err) {
-       if (err) return console.log(err);
-    });
-  });
+  var result = args[2].replace(go, newIP);
+  //console.log(result);
+
+  return result;
 
 }
 
