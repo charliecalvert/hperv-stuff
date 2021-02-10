@@ -1,3 +1,4 @@
 #! /bin/bash
 
+ssh -t pi2 "cd ~/Git/hyperv-stuff && pwd && node main.js"
 scp pi2:/home/pi/Git/hyperv-stuff/config ~/.ssh/.
