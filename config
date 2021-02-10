@@ -34,6 +34,12 @@ Host aws
 	User ubuntu
 	IdentityFile ~/.ssh/ElfWest.pem
 
+Host ec2-elf
+	HostName 44.242.18.170
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/ElfWest.pem
+
 Host mint
 	HostName 172.20.87.9
 	Port 22
