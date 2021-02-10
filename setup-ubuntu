@@ -1,0 +1,8 @@
+
+#! /bin/bash
+
+HOME_DIR=/home/charlie 
+
+ssh us01 "bash -s" < ssh-setup
+scp ~/.ssh/Home-20* ~/.ssh/config us01:"$HOME_DIR"/.ssh/.
+ssh us01 "bash -s" < ssh-setup

@@ -1,0 +1,19 @@
+#! /bin/bash
+
+if [ ! -f ~/.ssh/id_rsa ]; then
+    cd
+    ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+fi
+
+# ssh us01 "bash -s" < 'cat "$HOME_DIR"/ssh/Home-2019-10-27.pub >> "$HOME_DIR"/.ssh/authorized_keys'
+
+if [ -f ~/.ssh/Home-2019-10-27.pub ]; then
+    cat ~/.ssh/Home-2019-10-27.pub >> ~/.ssh/authorized_keys
+fi
+
+TEMP_DIR="$HOME/temp"
+
+if [ ! -d "$TEMP_DIR" ]; then
+  mkdir "$TEMP_DIR"
+fi
