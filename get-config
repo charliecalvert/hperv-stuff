@@ -1,0 +1,3 @@
+#! /bin/bash
+
+scp pi2:/home/pi/Git/hyperv-stuff/config ~/.ssh/.
