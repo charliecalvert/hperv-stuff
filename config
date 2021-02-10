@@ -22,20 +22,32 @@ Host pi2
 	User pi
 	IdentityFile ~/.ssh/Home-2019-10-27
 
+Host esig
+	HostName eastsideintergroup.com
+	Port 22
+	User eastsil4
+	IdentityFile ~/.ssh/esig-key
+
+Host aws
+	HostName 52.35.150.195
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/Home-2019-10-27
+
 Host mint
-	HostName 1.10.10.10
+	HostName 100.10.10.10
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us01
-	HostName 20.20.20.20
+	HostName 120.20.20.20
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us02
-	HostName 3.3.30.30
+	HostName 130.30.30.30
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27

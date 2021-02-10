@@ -1,20 +1,20 @@
 
 // fileToRead, sectionToChange, configFile
-function modifyConfig(args) {
+function modifyConfig(fileToRead, sectionToChange, configFile) {
 
 	var fs = require('fs');
 
 	var newIP = "";
-	var data = fs.readFileSync(args[0], 'utf8');
-	newIP = `Host ${args[1]}\n\tHostName ${data}`;
+	var data = fs.readFileSync(fileToRead, 'utf8');
+	newIP = `Host ${sectionToChange}\n\tHostName ${data}`;
 	console.log('NewIP:', newIP);
 
-	var regExp = `Host ${args[1]}\n\tHostName .*\n`;
+	var regExp = `Host ${sectionToChange}\n\tHostName .*\n`;
 	console.log('REGEXP_STR', regExp);
 	var go = new RegExp(regExp, 'm');
 
 
-	var result = args[2].replace(go, newIP);
+	var result = configFile.replace(go, newIP);
 
 	return result;
 }

@@ -8,7 +8,7 @@ console.log(files);
 var configData = fs.readFileSync(CONFIG_NAME, 'utf8');
 for (const file of files) {
   if (file != "README.md") {
-    configData = modifyConfig([`ip-files/${file}`, file, configData]);
+    configData = modifyConfig(`ip-files/${file}`, file, configData);
     console.log('RESLT', configData);
   }
 }
