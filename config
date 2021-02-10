@@ -32,16 +32,16 @@ Host aws
 	HostName 52.35.150.195
 	Port 22
 	User ubuntu
-	IdentityFile ~/.ssh/Home-2019-10-27
+	IdentityFile ~/.ssh/ElfWest.pem
 
 Host mint
-	HostName 100.10.10.10
+	HostName 172.20.87.9
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us01
-	HostName 120.20.20.20
+	HostName 172.18.238.240
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
