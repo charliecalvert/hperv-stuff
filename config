@@ -49,11 +49,11 @@ Host mint
 Host us01
 	HostName 172.18.238.240
 	Port 22
-	User charlie
+	User ubuntu
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us02
 	HostName 130.30.30.30
 	Port 22
-	User charlie
+	User ubuntu
 	IdentityFile ~/.ssh/Home-2019-10-27

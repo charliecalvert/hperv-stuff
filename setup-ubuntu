@@ -3,6 +3,6 @@
 
 HOME_DIR=/home/charlie 
 
-ssh us01 "bash -s" < ssh-setup
-scp ~/.ssh/Home-20* ~/.ssh/config us01:"$HOME_DIR"/.ssh/.
-ssh us01 "bash -s" < ssh-setup
+ssh $1 "bash -s" < ssh-setup
+scp ~/.ssh/Home-20* ~/.ssh/config $1:"$HOME_DIR"/.ssh/.
+ssh $1 "bash -s" < ssh-setup
