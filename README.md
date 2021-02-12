@@ -1,6 +1,14 @@
-    node try.js mintip github
-    node try.js mintip bitbucket
+## Adding to config
 
+Here is an item in the config file:
+
+    Host us02
+        HostName 130.30.30.30
+        Port 22
+        User ubuntu
+        IdentityFile ~/.ssh/Home-2019-10-27
+
+Make sure you indent with tabs and use LF ffor line endings
 
 ## Send IP
 
