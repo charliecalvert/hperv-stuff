@@ -41,19 +41,31 @@ Host ec2-elf
 	IdentityFile ~/.ssh/ElfWest.pem
 
 Host mint
-	HostName 172.20.87.9
+	HostName 172.29.175.33
 	Port 22
 	User charlie
 	IdentityFile ~/.ssh/Home-2019-10-27
 
+Host us00
+	HostName 172.20.82.223
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/Home-2019-10-27
+	
 Host us01
-	HostName 172.18.238.240
+	HostName 172.20.82.223
 	Port 22
 	User ubuntu
 	IdentityFile ~/.ssh/Home-2019-10-27
 
 Host us02
-	HostName 130.30.30.30
+	HostName 172.29.173.50
+	Port 22
+	User ubuntu
+	IdentityFile ~/.ssh/Home-2019-10-27
+
+Host us03
+	HostName 172.29.161.102
 	Port 22
 	User ubuntu
 	IdentityFile ~/.ssh/Home-2019-10-27
